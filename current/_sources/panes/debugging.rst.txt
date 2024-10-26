@@ -21,7 +21,7 @@ You can fully control debugger execution from the :guilabel:`Debug` menu, :guila
 
 Additionally, the  :doc:`editor` shows the line of code the debugger is currently stopped on with an arrow.
 
-.. _console commands: https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/
+.. _console commands: https://wangchuan.github.io/coding/2017/07/12/ipdb-cheat-sheet.html
 
 .. image:: /images/debugging/debugging-arrow.png
    :alt: Spyder Editor showing the debugging panel
@@ -47,6 +47,7 @@ Finally, you can enter and execute multiline statements in Spyder's debugger jus
    :alt: Debugger showing multiline debugger
 
 
+.. _debugging-breakpoints:
 
 ===========
 Breakpoints
@@ -60,11 +61,11 @@ To open it, select :menuselection:`Debug --> List breakpoints`, or press :kbd:`C
 
 There are several different ways to set and clear breakpoints:
 
-  * With the :guilabel:`Set/clear breakpoint` option in the Debug menu.
-  * Through pressing the configurable keyboard shortcut (:kbd:`F12` for normal, or :kbd:`Shift-F12` for conditional breakpoints by default).
-  * By clicking to the left of the line number in an open file in the Editor (adding :kbd:`Shift` for a conditional breakpoint).
-  * With the ``breakpoint()`` builtin function in your code.
-  * Interactively, using the ``b`` command in a debugging session.
+* With the :guilabel:`Set/clear breakpoint` option in the Debug menu.
+* Through pressing the configurable keyboard shortcut (:kbd:`F12` for normal, or :kbd:`Shift-F12` for conditional breakpoints by default).
+* By clicking to the left of the line number in an open file in the Editor (adding :kbd:`Shift` for a conditional breakpoint).
+* With the ``breakpoint()`` builtin function in your code.
+* Interactively, using the ``b`` command in a debugging session.
 
 .. image:: /images/debugging/debugging-breakpoints.gif
    :alt: Spyder showing setting conditional breakpoint
@@ -116,9 +117,9 @@ To avoid showing plots while debugging, deactivate the :guilabel:`Process execut
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`editor`
 * :doc:`ipythonconsole`

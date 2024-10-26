@@ -7,6 +7,10 @@ strong {
 
 /* Center all images by default */
 
+section img {
+  margin-bottom: 1rem;
+}
+
 .section img:not([class]) {
   display: block;
   margin-left: auto;
@@ -45,8 +49,8 @@ strong {
 
 /* Ensure FA icons applied to section divs display inline */
 
-div.fasb h3,
-div.fabb h3 {
+section.fasb h3,
+section.fabb h3 {
   display: inline-block;
 }
 
@@ -81,20 +85,33 @@ iframe {
 
 /*** Custom colors for specific FA icons in the index page ***/
 
-div.fa-laptop-code::before {
+section.fa-laptop-code::before {
   color: #4e4e4e;
 }
 
-div.fa-book::before {
+section.fa-book::before {
   color: #6a3514;
 }
 
-div.fa-globe-americas::before {
+section.fa-globe-americas::before {
   color: #1c4489;
 }
 
-div.fa-user-friends::before {
+section.fa-user-friends::before {
   color: #f6951f;
+}
+
+/*** Style for OpenTeams icon, used like the FA Brands icons ***/
+
+.openteams-icon::before {
+  content: url("../images/openteams-favicon.svg");
+  margin-left: -0.2em;
+  width: 1.3em;
+}
+
+section.openteams-icon::before {
+  margin-right: 0;
+  padding-bottom: 0;
 }
 
 /*** Changes to the FAQ page ***/
@@ -147,7 +164,6 @@ div.fa-user-friends::before {
 }
 
 @media (max-width: 767px) {
-
   .tour-overlay .highlight-rect {
     stroke-width: 10;
   }
@@ -189,27 +205,11 @@ a[href="#join-our-community"] + ul li.toc-h3 {
   display: none;
 }
 
-/* Version selector and header */
+/* Version selector using PyData Sphinx Theme features */
 
-#versions-header {
-  color: rgb(0 0 0 / 0.65);
-  font-size: 0.8rem;
-  margin-top: 1.1rem;
-  text-transform: uppercase;
-}
-
-#select-versions {
-  background-color: transparent;
-  border: 1px solid rgb(0 0 0 / 0.15);
-  color: rgb(0 0 0 / 0.65);
-  font-size: 90%;
-  margin-bottom: 7px;
-  padding: 2px;
-}
-
-#select-versions,
-#select-versions option {
-  width: 98%;
+/* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
+.version-switcher__button {
+  margin-bottom: 0 !important;
 }
 
 /*** Styles for video transcript dropdown elements ***/
@@ -255,8 +255,7 @@ div.scroll {
   font-size: 0.8em;
   height: 250px;
   margin: 1px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
 }
@@ -296,7 +295,8 @@ table.installer-table tbody td p::before {
   font-family: "Font Awesome 5 Brands";
 }
 
-table.installer-table tbody td:nth-child(1) p {
+table.installer-table tbody td:nth-child(1) p,
+table.installer-table tbody td:nth-child(4) p {
   padding-top: 0.62em;
 }
 
@@ -307,15 +307,22 @@ table.installer-table tbody td:nth-child(1) p::before {
   vertical-align: middle;
 }
 
-table.installer-table tbody td:nth-child(2) p::before {
+table.installer-table tbody td:nth-child(2) p::before,
+table.installer-table tbody td:nth-child(3) p::before {
   content: "\f179";
   font-size: 2em;
   padding-right: 0.5em;
   vertical-align: sub;
 }
 
-@media screen and (max-width: 991px) {
+table.installer-table tbody td:nth-child(4) p::before {
+  content: "\f17c";
+  font-size: 1.6em;
+  padding-right: 0.5em;
+  vertical-align: middle;
+}
 
+@media screen and (max-width: 991px) {
   table.installer-table td {
     display: block;
   }

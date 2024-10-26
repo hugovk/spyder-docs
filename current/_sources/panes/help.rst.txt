@@ -52,6 +52,7 @@ The latter can be useful when docstrings are not available or insufficient to do
    :alt: Spyder help pane showing different modes
 
 
+.. _help-hover-hints:
 
 ========================
 Getting help by hovering
@@ -74,9 +75,9 @@ This can be disabled in the :guilabel:`Help` pane's top-right options menu so th
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`editor`
 * :doc:`ipythonconsole`

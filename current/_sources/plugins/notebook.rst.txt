@@ -1,14 +1,6 @@
-:orphan:
-
 ###############
 Spyder Notebook
 ###############
-
-.. warning::
-
-   Currently, this plugin is still being ported to Spyder 5, and will likely not yet work or experience serious issues on this version of Spyder.
-   A compatible version is expected soon.
-   Thanks for your patience!
 
 **Spyder-notebook** is a plugin that allows you to open, edit and interact with Jupyter Notebooks right inside Spyder.
 
@@ -25,11 +17,11 @@ If you installed Spyder using conda, the best way to install Spyder-notebook is 
 
 .. code-block:: bash
 
-   conda install spyder-notebook -c spyder-ide
+   conda install spyder-notebook -c conda-forge
 
 .. important::
 
-   At the moment it is not possible to use this plugin with the Spyder :ref:`standalone_installers_ref` for Windows and macOS. We're working to make that possible in the future.
+   At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to make that possible in the future.
 
 Restart Spyder in order to be able to use the plugin.
 
