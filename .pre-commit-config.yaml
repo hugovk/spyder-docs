@@ -11,7 +11,7 @@ minimum_pre_commit_version: '2.10.0'
 default_language_version:
   python: python3
 
-default_stages: [commit]
+default_stages: [pre-commit]
 
 exclude: '\.(min\.(js|css)|pot?)$'
 
@@ -24,7 +24,7 @@ repos:
 
 # General fixers
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v5.0.0
   hooks:
   - id: trailing-whitespace
     name: Trim trailing whitespace
@@ -41,7 +41,7 @@ repos:
 
 # More general fixers
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.5.1  # Pinned for now to avoid requiring pre-commit >=3.2.0
+  rev: v1.5.5  # Pinned for now to avoid requiring pre-commit >=3.2.0
   hooks:
   - id: remove-tabs
     name: Replace tabs with spaces
@@ -65,7 +65,7 @@ repos:
 
 # Lint and fix CSS with stylelint
 - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-  rev: v16.9.0
+  rev: v16.10.0
   hooks:
   - id: stylelint
     name: Lint and fix CSS (stylelint)
@@ -102,7 +102,7 @@ repos:
 
 # Lint and fix JavaScript
 - repo: https://github.com/eslint/eslint
-  rev: v9.9.0  # Pin to fix dep conflict on install; see eslint/eslint#18956
+  rev: v9.13.0  # Pin to fix dep conflict on install; see eslint/eslint#18956
   hooks:
   - id: eslint
     name: Lint and fix JavaScript (ESLint)
@@ -123,7 +123,7 @@ repos:
 
 # Check JSON
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v5.0.0
   hooks:
   - id: check-json
     name: Check JSON
@@ -146,7 +146,7 @@ repos:
 
 # Format Python
 - repo: https://github.com/psf/black-pre-commit-mirror
-  rev: '24.8.0'
+  rev: '24.10.0'
   hooks:
   - id: black
     name: Format Python with Black
@@ -155,7 +155,7 @@ repos:
 
 # Check Python
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v5.0.0
   hooks:
   - id: check-ast
     name: Check Python AST
@@ -206,7 +206,7 @@ repos:
 
 # Check TOML and XML
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v5.0.0
   hooks:
   - id: check-toml
     name: Check TOML
@@ -224,7 +224,7 @@ repos:
 
 # Check YAML
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v5.0.0
   hooks:
   - id: check-yaml
     name: Check YAML
@@ -240,7 +240,7 @@ repos:
 
 # Replace CRLF with LF post-prettify
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.5.1  # Pinned for now to avoid requiring pre-commit >=3.2.0
+  rev: v1.5.5  # Pinned for now to avoid requiring pre-commit >=3.2.0
   hooks:
   - id: remove-crlf
     name: Replace CRLFs with LF
@@ -257,7 +257,7 @@ repos:
     name: Check for Unicode replacement chars
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v5.0.0
   hooks:
   - id: check-added-large-files
     name: Check for added large files
